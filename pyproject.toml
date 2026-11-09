@@ -1,0 +1,39 @@
+[project]
+name = "dn_rl_sim"
+version = "0.1.0"
+description = "A clean configuration for Reinforcement Learning and Scientific Computing"
+readme = "README.md"
+requires-python = ">=3.10"
+
+
+dependencies = [
+    "torch>=2.0.0",
+    "gymnasium>=0.29.0",
+    "stable-baselines3>=2.3.0",
+    "sb3-contrib>=2.3.0",
+    "numpy>=1.24.0",
+    "scipy>=1.10.0",
+    "pandas>=2.0.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+    "simpy>=4.0.0",
+    "pyswarm>=0.6.0",
+    "tensorboard>=2.14.0",
+    "wandb>=0.16.0",
+    "tqdm>=4.65.0",
+    "h5py",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.sdist]
+include = ["src/*"]
+
+[tool.hatch.build.targets.wheel]
+include = ["src/*"]
+sources = ["src"]
+
+[dependency-groups]
+dev = ["pytest", "black", "ruff", "ipykernel", "ipywidgets"]

@@ -1,0 +1,28 @@
+# Simulation output and datasets
+deployments_datasets/
+traffic_datasets/
+simulation_saves/
+trained_models/
+*results*
+
+# Experiment logs
+code/wandb/
+wandb/
+
+# Python cache and temporary files
+__pycache__/
+*.py[cod]
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# vscode settings
+.vscode/
+
+# venv files 
+**/.venv
+
+#validationand test files 
+**/validation
